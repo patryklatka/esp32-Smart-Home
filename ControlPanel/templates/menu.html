@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dane z czujników</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    </head>
+<body>
+    <!-- Menu główne -->
+    <div id="mainMenu" class="section visible">
+        <h1>Menu Główne</h1>
+        
+        <!-- Nowy kontener na kontrolki -->
+        <div id="controlsContainer" class="gr1_controls-container">
+            <h2>Grupa 1</h2>
+            <!-- Kontrolki światła -->
+            <div class="gr1_light-control">
+                <button id="gr1_lightButton">Włącz światło</button>
+                <div class="gr1_circle" id="gr1_lightIndicator"></div>
+            </div>
+
+            <!-- Kontrolki wiatraka -->
+            <div class="gr1_fan-control">
+                <button id="gr1_fanButton">Włącz wiatrak</button>
+                <div class="gr1_fan" id="gr1_fanIndicator">
+                    <div></div> <!-- Trzecia łopatka -->
+                </div>
+            </div>
+
+            <!-- Kontrolki temperatury -->
+            <div class="gr1_temperature-control">
+                <button id="gr1_temperatureButton">Temperatura</button>
+                <div id="gr1_temperatureDisplay"></div>
+            </div>
+
+            <!-- Kontrolki wilgotności -->
+            <div class="gr1_humidity-control">
+                <button id="gr1_humidityButton">Wilgotność</button>
+                <div id="gr1_humidityDisplay"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sekcja wykresu temperatury-->
+    <div id="gr1_temperaturePlotSection" class="section">
+        <h1>Temperatura</h1>
+        <button id="gr1_backToMenuButtonFromTemperature">Powrót do menu</button>
+        <div id="gr1_temperaturePlot"></div>
+    </div>
+
+    <!-- Sekcja wykresu wilgotności --> 
+    <div id="gr1_humidityPlotSection" class="hidden">
+        <h1>Wilgotność</h1>
+        <button id="gr1_backToMenuButtonFromHumidity">Powrót do menu</button>
+        <div id="gr1_humidityPlot"></div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/websocket.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/lightAndFan.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/plot.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/ui.js') }}"></script>
+
+</body>
+</html>

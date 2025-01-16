@@ -1,0 +1,15 @@
+Gate-ESP32H2/.devcontainer
+Gate-ESP32H2/.vscode
+Gate-ESP32H2/build
+Gate-ESP32H2/sdkconfig.old
+Gate-ESP32C6/.devcontainer
+Gate-ESP32C6/.vscode
+Gate-ESP32C6/build
+Gate-ESP32C6/sdkconfig.old
+firstGroupSensors/.devcontainer
+firstGroupSensors/.vscode
+firstGroupSensors/build
+firstGroupSensors/sdkconfig.old
+ControlPanel/__pycache__
+ControlPanel/.env
+ControlPanel/venv

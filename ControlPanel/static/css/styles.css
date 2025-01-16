@@ -1,0 +1,202 @@
+/* Styl dla ogólnego kontenera z kontrolkami */
+.gr1_controls-container {
+    width: 320px; /* Szerokość prostokąta */
+    padding: 20px; /* Odstęp wewnętrzny */
+    margin: 20px auto; /* Wyśrodkowanie kontenera */
+    border: 2px solid #aaa; /* Ramka prostokąta */
+    border-radius: 20px; /* Zaokrąglone rogi */
+    background-color: #f5f5f5; /* Kolor tła */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Delikatny cień */
+}
+
+/* Ogólne style dla menu i kontrolki */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.control {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Styl dla przycisków i kontrolek */
+button {
+    font-size: 16px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #4CAF50;
+    color: white;
+    margin: 10px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Kontener na wykres */
+#gr1_temperaturePlot {
+    width: 100%;
+    height: 400px;
+    display: block; /* Wykres jest widoczny */
+}
+
+/* Styl dla temperatury */
+.gr1_temperature-control {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    width: 200px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+#gr1_temperatureDisplay {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Styl dla wilgotnosci */
+.gr1_humidity-control {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    width: 200px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+#gr1_humidityDisplay {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Ukrywanie wykresu i kontrolki po kliknięciu */
+.hidden {
+    display: none;
+}
+
+/* Styl dla sekcji */
+.section {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+/* Styl dla kontrolek (świeca, wiatrak, temperatura) */
+.gr1_fan-control, .gr1_light-control, .gr1_temperature-control, .gr1_humidity-control{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+/* Dodatkowe style dla ikon kółka i wiatraka */
+.gr1_circle, .gr1_fan {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: black; /* Początkowy kolor */
+    border: 2px solid black; /* Czarna obramówka */
+}
+
+
+.gr1_fan {
+    width: 40px;
+    height: 40px;
+    background-color: #4CAF50;
+    border-radius: 50%;
+    position: relative;
+    border: 2px solid black; /* Obramowanie */
+    animation: spin 0s linear infinite; /* Animacja domyślnie wyłączona */
+}
+
+.gr1_fan::before, .gr1_fan::after, .gr1_fan > div {
+    content: '';
+    position: absolute;
+    width: 50%; /* Szerokość łopatki */
+    height: 10%; /* Długość łopatki */
+    background-color: black; /* Kolor łopatek */
+    top: 50%;
+    left: 50%;
+    transform-origin: 0% 0%; /* Punkt obrotu łopatki */
+}
+
+.gr1_fan::before {
+    transform: rotate(0deg) ;
+}
+
+.gr1_fan::after {
+    transform: rotate(120deg) ;
+}
+
+.gr1_fan > div {
+    transform: rotate(240deg) ;
+}
+
+/* Animacja obrotu */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+h1 {
+    text-align: center;
+}
+
+/* Styl dla napisu "Grupa 1" */
+h2 {
+    font-size: 24px; /* Zmieniamy rozmiar czcionki */
+    font-weight: bold; /* Ustawiamy pogrubienie */
+    text-align: center; /* Wyśrodkowanie tekstu */
+    /* margin-bottom: 15px; Odstęp od kolejnych elementów */
+    margin-top: 5px; 
+}
+
+
+/* Ustawienia dla kontenera przycisku i ikony */
+.control {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#lightCircleGroup2 {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: gray; /* Początkowy kolor */
+}
+
+
+
+
+
+
+
